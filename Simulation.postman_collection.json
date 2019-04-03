@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "bb15b1d5-d1ef-435f-890c-a0e1c9f0d67b",
+		"name": "Simulation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateSimulation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\":\"Simulation3\", \n  \"simulationParticipants\": \n\t[\n  \t\t{ \"horseId\":193, \"jockeyId\":193, \"luckFactor\":1.0}, \n\t\t{ \"horseId\":194, \"jockeyId\":194, \"luckFactor\":0.95}, \n\t\t{ \"horseId\":195, \"jockeyId\":195, \"luckFactor\":1.05}\n\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/simulations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"simulations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllSimulations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/simulations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"simulations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findOneById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/simulations/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"simulations",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/simulations/filter?name=Simul",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"simulations",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Simul"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

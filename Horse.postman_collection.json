@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "ba17abff-181f-4acc-b94d-ccae4ec2164c",
+		"name": "Horse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "allHorses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/horses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"horses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findHorseById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/horses/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"horses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterHorse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/horses/filter?breed=bureed",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"horses",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "breed",
+							"value": "bureed"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createHorse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : \"\",\n\t\"name\" : \"testHorse1\",\n\t\"breed\" : \"testBreed1\",\n\t\"minSpeed\" : 45.0,\n\t\"maxSpeed\" : 100.0\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/horses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"horses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateHorse",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : null,\n\t\"name\" : \"testHorse1\",\n\t\"breed\" : \"testBreed1\",\n\t\"minSpeed\" : 44.0,\n\t\"maxSpeed\" : 55.0\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/horses/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"horses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteHorse",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/horses/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"horses",
+						"100"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
